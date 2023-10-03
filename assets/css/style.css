@@ -17,7 +17,7 @@ header {
 
 .city {
     background-image: linear-gradient(to bottom right,#00d4ff,#7a7af9);
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 .city-img {

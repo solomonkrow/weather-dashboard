@@ -20,91 +20,53 @@
       <aside class="col-lg-3">
         <h2 class="search">Search for a City :</h2>
 
-        <form class="search-form">
+        <!-- <form class="search-form"> -->
           <input
             type="text"
             placeholder="       City Name"
-            class="d-grid col-9 col-lg-9 mx-auto p-2 rounded-pill search-input"
+            class="d-grid col-9 col-lg-9 mx-auto p-2 rounded-pill"
             required
             style="box-shadow: none"
+            id="search-input"
           />
           <br />
           <button
-            type="submit"
-            class="btn btn-primary d-grid col-3 mx-auto rounded-pill search-button"
+            
+            class="btn btn-primary d-grid col-3 mx-auto rounded-pill "
+            id="search-button"
           >
             Search
           </button>
-        </form>
+        <!-- </form> -->
 
         <hr />
-        <div>
+        <div id="buttons">
           <button
             class="btn btn-secondary row m-1 p-3 container d-grid mx-auto rounded-pill col-8 col-lg-12"
             type="button"
+            
           >
             Dallas
           </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Mexico City
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Lagos
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Seoul
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Tokyo
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Germany
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Madrid
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
-          >
-            Vancouver
-          </button>
+         
         </div>
       </aside>
 
-      <section class="col-12 col-lg-8">
-        <div class="city row mx-4 mb-3 p-4">
+      <section class="col-12 col-md-8 col-lg-8 container-fluid">
+        <div class="city row mx-4 mb-3 p-4 text-center">
           <h2 class="m-2 city-name">
-            Dallas (10/01/2023)
+            
             <img
-              src="/assets/images/icons8-sun-96.png"
+              src=""
               alt=""
               class="city-img"
             />
           </h2>
 
           <ul>
-            <h3 class="p-4 py-lg- temp">Temp : °F</h3>
-            <h3 class="p-4 py-lg- wind-speed">Wind : MPH</h3>
-            <h3 class="p-4 py-lg- humidity">Humidity : %</h3>
+            <h3 class="p-3 py-lg- temp">Temp : °F</h3>
+            <h3 class="p-3 py-lg- wind-speed">Wind : MPH</h3>
+            <h3 class="p-3 py-lg- humidity">Humidity : %</h3>
           </ul>
 
           <img
@@ -116,7 +78,7 @@
         
         <div class="forecast row d-flex justify-content-center">
           <h2>5-Day Forecast :</h2>
-          <div class="card col-md-6 col-lg-2 m-3">
+          <div class="card col-11 col-md-8 col-lg-2 m-3">
             <h3 class="py-2">10/01/2023</h3>
             <img
               class="mx-auto"
@@ -130,7 +92,7 @@
             </ul>
           </div>
 
-          <div class="card col-md-6 col-lg-2 m-3">
+          <div class="card col-11 col-md-8 col-lg-2 m-3">
             <h3 class="py-2">10/02/2023</h3>
             <img
               class="mx-auto"
@@ -144,7 +106,7 @@
             </ul>
           </div>
 
-          <div class="card col-md-6 col-lg-2 m-3">
+          <div class="card col-11 col-md-8 col-lg-2 m-3">
             <h3 class="py-2">10/03/2023</h3>
             <img
               class="mx-auto"
@@ -158,7 +120,7 @@
             </ul>
           </div>
 
-          <div class="card col-md-6 col-lg-2 m-3">
+          <div class="card col-11 col-md-8 col-lg-2 m-3">
             <h3 class="py-2">10/04/2023</h3>
             <img
               class="mx-auto"
@@ -172,7 +134,7 @@
             </ul>
           </div>
 
-          <div class="card col-md-6 col-lg-2 m-3">
+          <div class="card col-11 col-md-8 col-lg-2 m-3">
             <h3 class="py-2">10/05/2023</h3>
             <img
               class="mx-auto py-1"
@@ -188,5 +150,6 @@
         </div>
       </section>
     </main>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
