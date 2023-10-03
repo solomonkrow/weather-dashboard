@@ -28,26 +28,26 @@ console.log(cityEnter);
             document.querySelector(".humidity").innerHTML = "Humidity : " + data.main.humidity + " %";
 
             if(data.weather[0].main == "Clouds"){
-                weatherIcon.src = "/assets/images/icons8-clouds-96.png";
+                weatherIcon.src = "./assets/images/icons8-clouds-96.png";
             } else if (data.weather[0].main == "Clear"){
-                weatherIcon.src = "/assets/images/icons8-sun-96.png";
+                weatherIcon.src = "./assets/images/icons8-sun-96.png";
             } else if (data.weather[0].main == "Rain"){
-                weatherIcon.src = "/assets/images/icons8-heavy-rain-96.png";
+                weatherIcon.src = "./assets/images/icons8-heavy-rain-96.png";
             } else if (data.weather[0].main == "Drizzle"){   
-                weatherIcon.src = "/assets/images/icons8-rain-96.png";
+                weatherIcon.src = "./assets/images/icons8-rain-96.png";
             } else if (data.weather[0].main == "Mist"){
-                weatherIcon.src = "/assets/images/icons8-fog-96.png";
+                weatherIcon.src = "./assets/images/icons8-fog-96.png";
             } 
     }); 
     
-    fetch(forecast)
+    /* fetch(forecast)
         .then(function(result){
             console.log(result);
             return response.json();
         })
         .then(function(days){
-
-        });
+            
+        }); */
 }
 
     
