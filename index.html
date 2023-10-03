@@ -11,149 +11,182 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
 
-  <body class="">
-    <header class="text-center p-1">
+  <body class="mb-auto">
+    <header class="text-center p-3">
       <h1>Weather Dashboard</h1>
     </header>
 
     <main class="container-fluid row m-0 mt-3 p-0">
-      
-        <aside class="col-lg-3">
-          <h2 class="search">Search for a City :</h2>
+      <aside class="col-lg-3">
+        <h2 class="search">Search for a City :</h2>
+
+        <form class="search-form">
           <input
             type="text"
-            placeholder="City Name"
-            class="d-grid col-lg-12 mx-auto p-2"
+            placeholder="       City Name"
+            class="d-grid col-9 col-lg-9 mx-auto p-2 rounded-pill search-input"
+            required
+            style="box-shadow: none"
           />
           <br />
-          <button type="button" class="btn btn-primary d-grid col-12 mx-auto">
+          <button
+            type="submit"
+            class="btn btn-primary d-grid col-3 mx-auto rounded-pill search-button"
+          >
             Search
           </button>
+        </form>
 
-          <hr />
-          <div>
-            <button
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-              type="button"
-              class=""
-            >
-              Dallas
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Mexico City
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Lagos
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Seoul
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Tokyo
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Germany
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Madrid
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary row m-1 container d-grid col-12 mx-auto"
-            >
-              Vancouver
-            </button>
-          </div>
-        </aside>
+        <hr />
+        <div>
+          <button
+            class="btn btn-secondary row m-1 p-3 container d-grid mx-auto rounded-pill col-8 col-lg-12"
+            type="button"
+          >
+            Dallas
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Mexico City
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Lagos
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Seoul
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Tokyo
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Germany
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Madrid
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary row m-1 p-3 container d-grid col-8 col-lg-12 mx-auto rounded-pill"
+          >
+            Vancouver
+          </button>
+        </div>
+      </aside>
 
-        <section class="col-lg-9 ">
-          <div class="city row mx-4 mb-3 ">
-            <h2 class="m-2 ">
-              Dallas (10/01/2023)
-              <img src="/assets/images/icons8-sun-96.png" alt="" class="city-img"/>
-            </h2>
+      <section class="col-12 col-lg-8">
+        <div class="city row mx-4 mb-3 p-4">
+          <h2 class="m-2 city-name">
+            Dallas (10/01/2023)
+            <img
+              src="/assets/images/icons8-sun-96.png"
+              alt=""
+              class="city-img"
+            />
+          </h2>
 
-            <ul>
+          <ul>
+            <h3 class="p-4 py-lg- temp">Temp : °F</h3>
+            <h3 class="p-4 py-lg- wind-speed">Wind : MPH</h3>
+            <h3 class="p-4 py-lg- humidity">Humidity : %</h3>
+          </ul>
+
+          <img
+            src="/assets/images/icons8-weather-forecast-96.png"
+            class="weather-icon img-thumbnail ms-auto"
+            alt=""
+          />
+        </div>
+        
+        <div class="forecast row d-flex justify-content-center">
+          <h2>5-Day Forecast :</h2>
+          <div class="card col-md-6 col-lg-2 m-3">
+            <h3 class="py-2">10/01/2023</h3>
+            <img
+              class="mx-auto"
+              src="/assets/images/icons8-rain-96.png"
+              alt=""
+            />
+            <ul class="p-0">
               <li class="py-2">Temp : °F</li>
               <li class="py-2">Wind : MPH</li>
               <li class="py-2">Humiditiy : %</li>
             </ul>
-
-            <img src="/assets/images/icons8-weather-forecast-96.png" class="weather-icon img-thumbnail ms-auto" alt="">
           </div>
 
-          <div class="forecast row">
-            <h2>5-Day Forecast :</h2>
-            <div class="card col m-3">
-              <h3 class="py-2">10/01/2023</h3>
-              <img class="mx-auto" src="/assets/images/icons8-rain-96.png" alt="" />
-              <ul class="p-0">
-                <li class="py-2">Temp : °F</li>
-                <li class="py-2">Wind : MPH</li>
-                <li class="py-2">Humiditiy : %</li>
-              </ul>
-            </div>
-
-            <div class="card col m-3">
-              <h3 class="py-2">10/02/2023</h3>
-              <img class="mx-auto" src="/assets/images/icons8-rain-96.png" alt="" />
-              <ul class="p-0">
-                <li class="py-2">Temp : °F</li>
-                <li class="py-2">Wind : MPH</li>
-                <li class="py-2">Humiditiy : %</li>
-              </ul>
-            </div>
-
-            <div class="card col m-3">
-              <h3 class="py-2">10/03/2023</h3>
-              <img class="mx-auto" src="/assets/images/icons8-rain-96.png" alt="" />
-              <ul class="p-0">
-                <li class="py-2">Temp : °F</li>
-                <li class="py-2">Wind : MPH</li>
-                <li class="py-2">Humiditiy : %</li>
-              </ul>
-            </div>
-
-            <div class="card col m-3">
-              <h3 class="py-2">10/04/2023</h3>
-              <img class="mx-auto" src="/assets/images/icons8-rain-96.png" alt="" />
-              <ul class="p-0">
-                <li class="py-2">Temp : °F</li>
-                <li class="py-2">Wind : MPH</li>
-                <li class="py-2">Humiditiy : %</li>
-              </ul>
-            </div>
-
-            <div class="card col m-3">
-              <h3 class="py-2">10/05/2023</h3>
-              <img class="mx-auto py-1" src="/assets/images/icons8-rain-96.png" alt="" />
-              <ul class="p-0">
-                <li class="py-2">Temp : °F</li>
-                <li class="py-2">Wind : MPH</li>
-                <li class="py-2">Humiditiy : %</li>
-              </ul>
-            </div>
+          <div class="card col-md-6 col-lg-2 m-3">
+            <h3 class="py-2">10/02/2023</h3>
+            <img
+              class="mx-auto"
+              src="/assets/images/icons8-rain-96.png"
+              alt=""
+            />
+            <ul class="p-0">
+              <li class="py-2">Temp : °F</li>
+              <li class="py-2">Wind : MPH</li>
+              <li class="py-2">Humiditiy : %</li>
+            </ul>
           </div>
-        </section>
-      
+
+          <div class="card col-md-6 col-lg-2 m-3">
+            <h3 class="py-2">10/03/2023</h3>
+            <img
+              class="mx-auto"
+              src="/assets/images/icons8-rain-96.png"
+              alt=""
+            />
+            <ul class="p-0">
+              <li class="py-2">Temp : °F</li>
+              <li class="py-2">Wind : MPH</li>
+              <li class="py-2">Humiditiy : %</li>
+            </ul>
+          </div>
+
+          <div class="card col-md-6 col-lg-2 m-3">
+            <h3 class="py-2">10/04/2023</h3>
+            <img
+              class="mx-auto"
+              src="/assets/images/icons8-rain-96.png"
+              alt=""
+            />
+            <ul class="p-0">
+              <li class="py-2">Temp : °F</li>
+              <li class="py-2">Wind : MPH</li>
+              <li class="py-2">Humiditiy : %</li>
+            </ul>
+          </div>
+
+          <div class="card col-md-6 col-lg-2 m-3">
+            <h3 class="py-2">10/05/2023</h3>
+            <img
+              class="mx-auto py-1"
+              src="/assets/images/icons8-rain-96.png"
+              alt=""
+            />
+            <ul class="p-0">
+              <li class="py-2">Temp : °F</li>
+              <li class="py-2">Wind : MPH</li>
+              <li class="py-2">Humiditiy : %</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
