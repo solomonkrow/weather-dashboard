@@ -1,0 +1,49 @@
+:root {
+    --borderColor: #14303a;
+    --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, white, #e3edf1, #60737a);
+    font-family: var(--font);
+}
+
+header {
+    background-image: linear-gradient(to right,#5858aa,#14303a);
+    color: white;
+    
+}
+
+.city {
+    background-image: linear-gradient(to bottom right,#00d4ff,#7a7af9);
+    border-radius: 5px;
+}
+
+.city-img {
+    width: 40px;
+}
+
+.weather-icon {
+    width: 200px;
+}
+
+.city ul{
+    list-style-type: none;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.forecast ul {
+    list-style-type: none;
+}
+
+.forecast img {
+    width: 50px;
+}
+
+.card {
+    background-image: linear-gradient(to bottom right,#5858aa,#14303a);
+    color: white;
+}
