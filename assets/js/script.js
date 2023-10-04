@@ -1,53 +1,63 @@
 var apiKEY = '2149febe993de9d5d23486b0f170b849';
 var cityButton = document.getElementById("search-button");
 var cityEnter = document.getElementById("search-input");
-var weatherIcon = document.querySelector(".city-img")
+var weatherImg = document.getElementById("city-img");
 
-var weather= 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=' + apiKEY;
+var weather = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=' + apiKEY;
 
-var forecast = 'https://api.openweathermap.org/data/2.5/forecast?lat='+'&lon='+'&appid=' + apiKEY;
+var forecast = "api.openweathermap.org/data/2.5/forecast?";
 
 var callback = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
 
 
 
 function checkWeather(cityEnter) {
-console.log(cityEnter);
-    console.log(callback + cityEnter + `&appid=${apiKEY}`);
+    //console.log(cityEnter);
+    //console.log(callback + cityEnter + `&appid=${apiKEY}`);
 
     fetch(callback + cityEnter + `&appid=${apiKEY}`)
         .then(function(response) {
-            console.log(response);
+            //console.log(response);
             return response.json();
     })
         .then(function(data) {
             console.log(data);
-            document.querySelector(".city-name").innerHTML = data.name + weatherIcon;
+            document.querySelector(".city-name").innerHTML = data.name;
             document.querySelector(".temp").innerHTML = "Temp : " + Math.round(data.main.temp) + "°F";
             document.querySelector(".wind-speed").innerHTML = "Wind Speed : " + data.wind.speed + " MPH";
             document.querySelector(".humidity").innerHTML = "Humidity : " + data.main.humidity + " %";
 
             if(data.weather[0].main == "Clouds"){
-                weatherIcon.src = "./assets/images/icons8-clouds-96.png";
+                weatherImg.src = "./assets/images/icons8-clouds-96.png";
             } else if (data.weather[0].main == "Clear"){
-                weatherIcon.src = "./assets/images/icons8-sun-96.png";
+                weatherImg.src = "./assets/images/icons8-sun-96.png";
             } else if (data.weather[0].main == "Rain"){
-                weatherIcon.src = "./assets/images/icons8-heavy-rain-96.png";
+                weatherImg.src = "./assets/images/icons8-heavy-rain-96.png";
             } else if (data.weather[0].main == "Drizzle"){   
-                weatherIcon.src = "./assets/images/icons8-rain-96.png";
+                weatherImg.src = "./assets/images/icons8-rain-96.png";
             } else if (data.weather[0].main == "Mist"){
-                weatherIcon.src = "./assets/images/icons8-fog-96.png";
+                weatherImg.src = "./assets/images/icons8-fog-96.png";
             } 
     }); 
+} 
     
-    /* fetch(forecast)
+
+function checkForecast(cityEnter) {
+        var forecastURL = callback + cityEnter + `&appid=${apiKEY}`;
+    var lat = forecastURL.coord;
+    var lon = forecastURL.coord;
+      fetch(forecast + `lat=${lat}` + `&lon=${lon}` + `&appid=${apiKEY}`)
         .then(function(result){
             console.log(result);
-            return response.json();
+            return result.json();
         })
         .then(function(days){
-            
-        }); */
+            console.log(days);
+            document.querySelector(".forecast-temp").innerHTML = days.main.temp; 
+            //coord.[0] 
+            //coord.[1]
+
+        }); 
 }
 
     
@@ -66,6 +76,7 @@ cityButton.addEventListener("click", function (){
     // console.log(cityEnter);
     
     checkWeather(cityEnter);
+    checkForecast(cityEnter);
     addHistory(cityEnter);
 });
 
